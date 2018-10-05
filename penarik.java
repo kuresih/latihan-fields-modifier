@@ -3,9 +3,9 @@ public class Penarik {
     private int saldo;
     private String pesan;
     private String namaNasabah;
-    int nomorUrut=0;
+    int nomerUrut=0;
     
-    public void dataNasabah(String name){
+    public void dataNasabah(String nama){
         namaNasabah=nama;
         System.out.println(" Nama Nasabah = " + namaNasabah);
     }
@@ -18,24 +18,24 @@ public class Penarik {
      public String getPesan(){
          return pesan;
      }
-    public int tarikUang(int uang){
+    public int penarikan(int uang){
         if(saldo- uang < 50 ){
             System.out.println(" Saldo Tidak Cukup.");
             return saldo;
         }else{
             System.out.println(" Penarikan = " + uang);
-            noUrut++;
+            nomerUrut++;
            return saldo-=uang;
         }
         
     }
-     public int tarikUang(int uang, String isi){
+     public int penarikan(int uang, String isi){
         if(saldo - uang < 50 ){
             System.out.println(" Saldo tidak mencukupi.");
             return saldo;
         }else{
             System.out.println(" Penarikan  = " + uang);
-            noUrut++;
+            nomerUrut++;
             pesan=isi;
            return saldo-=uang;
            
